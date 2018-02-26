@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        code, pre, textarea {
+            line-height: 1.4rem !important;
+        }
+        .QEditor_textarea, .QEditor_pre {
+            box-sizing: border-box;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem;
+            border: none;
+            font-family: monospace;
+            font-size: 13px;
+            background: transparent;
+            white-space: pre-wrap;
+            line-height: 1.5em;
+            word-wrap: break-word;
+        }
+        .QEditor_textarea {
+            border: none;
+            background: transparent;
+            outline: none;
+            resize: none;
+            opacity: 0.4;
+            margin: 0;
+            z-index: 1;
+            height: 100%;
+            -webkit-overflow-scrolling: touch;
+        }
+        .QEditor_pre {
+            z-index: 2;
+            pointer-events: none;
+            overflow-y: auto;
+            margin: 0;
+        }
+        .QEditor {
+            position: relative;
+            height: 340px;
+            color: #444;
+            background: #eee;
+        }
+        .QEditor_selectionTextarea {
+            z-index: -1;
+            position: absolute;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="code-editor"></div>
+    <script src="editor.js"></script>
+    <script>
+        var e = new QEditor({renderTo: document.querySelector('.code-editor')});
+    </script>
+</body>
+</html>
